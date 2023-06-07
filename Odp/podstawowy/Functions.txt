@@ -1,0 +1,112 @@
+1:def display_greetings():
+    print( "Hello!" )
+
+
+print('And now for something completely different.')
+2:def display_greetings():
+    print( "Hello!" )
+    print('And now for something completely different.')
+
+3:def display_greetings():
+    print( "Hello!" )
+    print( "And now for something completely different." )
+display_greetings()
+4:def display_self_congratulations():
+    print( "I am" )
+    print( "really great" )
+    print( "in calling" )
+    print( "functions!" )
+display_self_congratulations()
+5:def great_moment_in_human_history():
+    print("My first function in Python")
+6:def yet_another_great_moment():
+    print("My second function in Python")
+yet_another_great_moment()
+7:def display():
+    print("Eric Idle")
+display()
+8:def display( number ):
+    print( number )
+    
+display(3.14)
+9:def display( some_text ):
+    print( some_text )
+    
+display("And now for something completely different")
+10:def display_area( x, y ):
+    print( x * y )
+
+display_area(3,8)
+11:#your code
+
+def simple_per(x,y,z):
+    print(x+y+z)
+simple_per(23,9,8)
+12:def andNow():
+    return "And now something completely different"
+print(andNow())
+13:#Your code
+
+def add(x,y):
+    return x + y
+print(add(2,3))
+14:#Your code,=
+def multiply(x,y):
+    return x * y
+print(multiply("Ole!",10))
+
+15:#Your code
+def calc_area(x,y):
+    print("calculating area of a rectangle ...")
+    return x*y
+area = calc_area(17,36)
+print(area)
+
+16: #Your code
+
+def plus_tax(x):
+    x = x + x * 0.23
+    return x
+    
+17:#Your code
+
+def C_to_F(d):
+    d = d * (9/5) + 32
+    return d
+18:#Your code
+
+def GallonsToLiters(d):
+    d = d / 0.26417
+    return d
+    
+
+19:#Your code
+
+def calcCirc(f):
+    return 2 * 3.1416 * f
+20:#Your code
+
+def calcArea(f):
+    return f * 3.1416 * f
+21:def calcArea( r):
+    return 3.1416 * r**2 
+    
+def calcVolume(r,h):
+    p = calcArea(r)
+    return p * h
+22:#your codeto_time( 12, 5, 16 )
+def to_time(h,m,s):
+    d = str(s)+str(m)+str(h)
+    return s * 10000 + m * 100 + h
+23:#Your code
+def to_time(x):
+    hrs = x //3600
+    x = x - 3600 * hrs
+    m = x // 60
+    x = x - 60 * m
+    return hrs * 10000 + m * 100 + x
+24:#Your code
+
+def plus_tax(x,g):
+    return x + x * (g /100)
+    

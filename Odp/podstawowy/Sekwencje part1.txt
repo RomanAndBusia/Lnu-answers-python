@@ -1,0 +1,141 @@
+1:name = "Bill Munny"
+print(name[2])
+2:def element( text, number ):
+    return text[number]
+3:#Your code
+def sum_len(a,b):   return len(a) + len(b)
+4:#Your code
+def diff_len(a,b): 
+    if len(a) > len(b):
+        return len(a) - len(b)
+    return len(b) - len(a)
+5:#your code
+
+def get_month(a):
+    return a[2:4]
+6:def get_year( date ):
+    if int(date[2:4]) > 12:
+        return date[:4]
+    return date[4:]
+7:def add_dollar( text ):
+    lis = list(text)
+    lis[0] = "$"
+    lis[1] = "$"
+    lis[-1] = "$"
+    lis[-2] = "$"
+    return "".join(lis)
+8:def formatName( name ):
+    l = list(name)
+    a = l.index("_")
+    l[a+1] = l[a+1].capitalize()
+    l.pop(a)
+    return ''.join(l)
+9:def get_initials( name ):
+    l = list(name)
+    a = l.index(" ")
+    b = l[0] + l[a+1]
+    l.pop(a)
+    return b
+10:def get_index( value, text ):
+    if value in text:
+        b = text.index(value)
+        return b
+    return False
+11:def cleanText( text ):
+    while "$" in text:
+        text = text.replace("$",'')
+    return text
+12:def get_dollar( text ):
+    a = text.count("$")
+    return a * "$"
+13:def get_percentage( value, text ):
+    
+    return (text.count(value) / len(text)) * 100
+14:def hasDuplicates( text ):
+    print(text)
+    a = []
+    for v in range(len( text) - 1):
+        if text[v] == text[v + 1]:
+            return True
+    return False
+15:text = """I'm glad to say we've got the go-ahead to lend you the money you required. We will, of course,
+need for security the deed to your house, the deed to your aunt's house, of your wife's parents' house, 
+and of your granny's bungalow. And we will, in addition, need a controlling interest in the stock of 
+your new company, unrestricted access to your private bank accounts, the deposit of your three children 
+in our vaults as hostages, and a full legal indemnity in case of any embezzlement carried out against 
+you by members of our staff during the normal course of their duties."""
+
+s = {"a":0,"e":0,"i":0,"o":0,"u":0,"y":0}
+for v in text:
+    if v == "a" or v == "A":
+        s["a"] += 1
+    if v == "e" or v == "E":
+        s["e"] += 1
+    if v == "i" or v == "I":
+        s["i"] += 1
+    if v == "o" or v == "O":
+        s["o"] += 1
+    if v == "u" or v == "U":
+        s["u"] += 1
+    if v == "y" or v == "Y":
+        s["y"] += 1
+print("A "+str(s["a"])+"\nE "+str(s["e"])+"\nI "+str(s["i"])+"\nO "+str(s["o"])+"\nU "+str(s["u"])+"\nY "+str(s["y"]))
+16:def maxOrd( text ):
+    m = 0 
+    c = 0
+    for v in text:
+        c = ord(v)
+        if c > m:
+            m = c
+    return m
+17:def encrypt( message ):
+    text = ""
+    for v in message:
+        c = ord(v)
+        text+= chr(c *2)
+    return text
+18:def decrypt( message, key):
+    text = ""
+    
+    for v in message:
+        c = ord(v) / key
+        text+= chr(int(c))
+    return text
+19:def prize(days):
+    t = 0
+    p = 1
+    d = 1
+    ldp = 1
+    for v in range(1,days+ 1):
+        t += p
+        p += v + 1
+    return t
+20:def encrypt( message ):
+    t = ""
+    
+    for v in range(1,len(message)):
+        s = message[v]
+        c = ord(s)
+        t += chr(c + v)
+        
+    t = message[0] + t
+    return t
+21:def charsInDoc(a, b):
+    t = 0
+    
+    for v in range(a,b + 1):
+        t += charsOnPage(v)
+    return t
+22:def reverse(s):
+    t = ""
+    for v in s:
+        t = v + t
+    return t
+23:def oddChars(s):
+    t = ""
+    
+    for v in range(len(s)):
+        if v % 2 != 0:
+            t += s[v]
+            
+    return t

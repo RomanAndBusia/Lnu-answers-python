@@ -1,0 +1,129 @@
+1:def formatFirstName( name ):
+    t = ""
+    if name.isalpha() == True:
+        name = name.lower()
+        name = name.capitalize()
+        return name
+    return ""
+2:def formatHeight( feet, inches ):
+    if feet.isnumeric() == True and inches.isnumeric() == True:
+        if float(inches) > 11 and float(inches)>= 0:
+            return 0
+        else:
+            if inches != "10" and "0" in inches:
+                return 0
+            if feet == "10":
+                return str(feet) + " ft " + str(inches)
+            elif feet != "10" and "0" not in feet:
+                return str(feet) + " ft " + str(inches)
+            else:
+                return 0
+    return 0
+3:def clearText( s ):
+    t = ""
+    for v in s:
+        if v.isalnum() == True:
+            t = t + v
+    return t
+4:import math, balloons
+
+def calcVolume():
+    bn = balloons.balloonsNumber()
+    tp = 0
+    for x in range(0,bn):
+        p = 4 / 3 * math.pi * balloons.getRadius( x ) ** 3 / 1000
+        tp += p
+    return tp
+5:import time
+def displayTime():
+    d = time.ctime(time.time())
+    x = d.split(" ")
+    d = x[4] + " " + x[0].upper()
+    return d
+6:def findLongest( x ):
+    b = 0
+    for v in x:
+        if len(v) > b:
+            b = len(v)
+    return b
+7:def findLongest(x):
+    t = ""
+    for y in x:
+        if len(y) > len(t):
+            t = y
+    return t
+8:def testA( t1, t2 ):
+    a1 = 0
+    a2 = 0
+    k = ()
+    for x in range(len(t1)):
+        if t1[x] == "a":
+            a1 += 1
+            
+    for x in range(len(t2)):
+        if t2[x] == "a":
+            a2 += 1
+    if a2 > a1:
+        k = t2 + t1
+    else:
+        k = t1 + t2
+    
+    
+    return k
+9:def chineseWeekDays(chineseDays, day):
+    if day == "monday":
+        return chineseDays[0]
+    if day == "tuesday":
+        return chineseDays[1]
+    if day == "wednesday":
+        return chineseDays[2]
+    if day == "thursday":
+        return chineseDays[3]
+    if day == "friday":
+        return chineseDays[4]
+    if day == "saturday":
+        return chineseDays[5]
+    if day == "sunday":
+        return chineseDays[6]
+10:import math
+
+def calcAV( r ):
+    return (math.pi * (r **2),4/3 * math.pi * (r ** 3))
+11:def results( x ):
+    x[2] = x[2] + 273.15
+    return x
+12:def goldenRaspberry( x ):
+    
+    return sorted(x)
+13:def getHighest(x):
+    x.sort( reverse = True )
+    return x[:3]
+14:def highLow( t1, t2 ):
+    a = []
+    for x in t1:
+        a.append(x)
+    for x in t2:
+        a.append(x) 
+    a.sort()
+    k = []
+    k.append(a[0]) 
+    k.append(a[1]) 
+    k.append(a[2]) 
+    k.append(a[-3]) 
+    k.append(a[-2]) 
+    k.append(a[-1])
+    k.sort(reverse = True)
+    return k
+15:def selectEven(t1, t2):
+    l1 = []
+    l2 = []
+    for v in t1:
+        if v % 2 == 0:
+            l1.append(v)
+    for v in t2:
+        if v % 2 == 0:
+            l1.append(v)
+    return l1
+16:def concHighest(t1, t2, t3):
+    return [max(t1),max(t2),max(t3)]
+17:
